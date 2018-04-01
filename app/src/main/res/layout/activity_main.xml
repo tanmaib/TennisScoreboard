@@ -17,16 +17,16 @@
         <LinearLayout
             android:layout_width="@dimen/match_parent"
             android:layout_height="@dimen/wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageView
                 style="@style/ImageView"
-                android:layout_marginRight="10dp"
                 android:layout_marginEnd="10dp"
-                android:contentDescription="@string/crown"/>
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/crown" />
 
             <TextView
                 android:layout_width="@dimen/wrap_content"
@@ -34,15 +34,15 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:text="@string/Title"
-                android:textSize="20sp"/>
-               <!-- android:drawableLeft="@drawable/crown1"
-                android:drawableRight="@drawable/crown1-->
+                android:textSize="20sp" />
+            <!-- android:drawableLeft="@drawable/crown1"
+             android:drawableRight="@drawable/crown1-->
 
             <ImageView
                 style="@style/ImageView"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:contentDescription="@string/crown"/>
+                android:contentDescription="@string/crown" />
 
         </LinearLayout>
 
@@ -56,27 +56,27 @@
             android:gravity="center_horizontal">
 
             <EditText
-                android:id="@+id/TextView_1"
+                android:id="@+id/edit_View1"
                 style="@style/EditText"
-                android:hint="@string/Player1" />
+                android:hint="@string/Player11" />
 
             <TextView
-                android:id="@+id/TextView_2"
                 android:layout_width="@dimen/wrap_content"
                 android:layout_height="@dimen/wrap_content"
                 android:layout_margin="5dp"
                 android:text="@string/v" />
 
             <EditText
-                android:id="@+id/TextView_3"
+                android:id="@+id/edit_View2"
                 style="@style/EditText"
-                android:hint="@string/Player2" />
+                android:hint="@string/Player22" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="@dimen/match_parent"
             android:layout_height="@dimen/wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/toast_layout_root">
 
             <TextView
                 style="@style/TextView_1"
@@ -85,10 +85,8 @@
             <LinearLayout
                 android:layout_width="@dimen/match_parent"
                 android:layout_height="@dimen/wrap_content"
-                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp">
+                android:layout_marginRight="10dp">
 
                 <LinearLayout
                     android:id="@+id/LinearLayout_2"
@@ -97,31 +95,17 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView style="@style/TextView_2" />
+                    <TextView
+                        android:id="@+id/point_Player1"
+                        style="@style/TextView_2" />
 
-                    <LinearLayout
-                        android:layout_width="@dimen/match_parent"
-                        android:layout_height="@dimen/wrap_content">
+                    <TextView
+                        style="@style/TextView_3"
+                        android:text="@string/Game" />
 
-                        <TextView
-                            style="@style/TextView_3"
-                            android:text="@string/Set" />
-
-                        <TextView
-                            style="@style/TextView_3"
-                            android:text="@string/Game" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="@dimen/match_parent"
-                        android:layout_height="@dimen/wrap_content">
-
-                        <TextView style="@style/TextView_4" />
-
-                        <TextView style="@style/TextView_4" />
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/game_Player1"
+                        style="@style/TextView_4" />
 
                 </LinearLayout>
 
@@ -137,31 +121,17 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView style="@style/TextView_2" />
+                    <TextView
+                        android:id="@+id/point_Player2"
+                        style="@style/TextView_2" />
 
-                    <LinearLayout
-                        android:layout_width="@dimen/match_parent"
-                        android:layout_height="@dimen/wrap_content">
+                    <TextView
+                        style="@style/TextView_3"
+                        android:text="@string/Game" />
 
-                        <TextView
-                            style="@style/TextView_3"
-                            android:text="@string/Set" />
-
-                        <TextView
-                            style="@style/TextView_3"
-                            android:text="@string/Game" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="@dimen/match_parent"
-                        android:layout_height="@dimen/wrap_content">
-
-                        <TextView style="@style/TextView_4" />
-
-                        <TextView style="@style/TextView_4" />
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/game_Player2"
+                        style="@style/TextView_4" />
 
                 </LinearLayout>
 
@@ -184,25 +154,27 @@
                 android:layout_width="@dimen/match_parent"
                 android:layout_height="@dimen/wrap_content">
 
-                <Button
-                    style="@style/Button_1"
-                    android:text="@string/points2"
-                    android:onClick="decrease_Player1"/>
+                <!-- <Button
+                     style="@style/Button_1"
+                     android:onClick="decrease_Player1"
+                     android:text="@string/points2" />-->
 
                 <Button
+                    android:id="@+id/button_Point1"
                     style="@style/Button_1"
-                    android:text="@string/points1"
-                    android:onClick="increase_Player1"/>
+                    android:onClick="increase_Player1"
+                    android:text="@string/points1" />
+
+                <!--<Button
+                    style="@style/Button_1"
+                    android:onClick="decrease_Player2"
+                    android:text="@string/points2" />-->
 
                 <Button
+                    android:id="@+id/button_Point2"
                     style="@style/Button_1"
-                    android:text="@string/points2"
-                    android:onClick="decrease_Player2"/>
-
-                <Button
-                    style="@style/Button_1"
-                    android:text="@string/points1"
-                    android:onClick="increase_Player2"/>
+                    android:onClick="increase_Player2"
+                    android:text="@string/points1" />
 
             </LinearLayout>
 
@@ -284,13 +256,21 @@
                         android:layout_height="@dimen/wrap_content"
                         android:layout_weight="1">
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set1_Player1"
+                            style="@style/TextView_6" />
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set2_Player1"
+                            style="@style/TextView_6" />
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set3_Player1"
+                            style="@style/TextView_6" />
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set4_Player1"
+                            style="@style/TextView_6" />
                     </LinearLayout>
 
                     <View style="@style/EmptyView_2">
@@ -302,13 +282,21 @@
                         android:layout_height="@dimen/wrap_content"
                         android:layout_weight="1">
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set1_Player2"
+                            style="@style/TextView_6" />
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set2_Player2"
+                            style="@style/TextView_6" />
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set3_Player2"
+                            style="@style/TextView_6" />
 
-                        <TextView style="@style/TextView_6" />
+                        <TextView
+                            android:id="@+id/set4_Player2"
+                            style="@style/TextView_6" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -325,65 +313,81 @@
                 <TableRow>
 
                     <TextView
+                        android:id="@+id/name_Player1"
                         style="@style/TextView_7"
                         android:hint="@string/Player1" />
 
                     <Button
                         android:id="@+id/Ace_Player1"
                         style="@style/Button_2"
-                        android:text="@string/Ace"
-                        android:onClick="ace"/>
+                        android:onClick="ace"
+                        android:text="@string/Ace" />
 
                     <Button
                         android:id="@+id/Fault_Player1"
                         style="@style/Button_2"
-                        android:text="@string/Fault"
-                        android:onClick="fault"/>
+                        android:onClick="fault"
+                        android:text="@string/Fault" />
 
                     <Button
                         android:id="@+id/Unforced_Player1"
                         style="@style/Button_2"
-                        android:text="@string/Unfor"
-                        android:onClick="unforced"/>
+                        android:onClick="unforced"
+                        android:text="@string/Unfor" />
                 </TableRow>
 
                 <TableRow>
 
                     <TextView
+                        android:id="@+id/name_Player2"
                         style="@style/TextView_7"
                         android:hint="@string/Player2" />
 
                     <Button
                         android:id="@+id/Ace_Player2"
                         style="@style/Button_2"
-                        android:text="@string/Ace"
-                        android:onClick="ace"/>
+                        android:onClick="ace"
+                        android:text="@string/Ace" />
 
                     <Button
                         android:id="@+id/Fault_Player2"
                         style="@style/Button_2"
-                        android:text="@string/Fault"
-                        android:onClick="fault"/>
+                        android:onClick="fault"
+                        android:text="@string/Fault" />
 
                     <Button
                         android:id="@+id/Unforced_Player2"
                         style="@style/Button_2"
-                        android:text="@string/Unfor"
-                        android:onClick="unforced"/>
+                        android:onClick="unforced"
+                        android:text="@string/Unfor" />
                 </TableRow>
             </TableLayout>
+
+                <Button
+                    android:id="@+id/newGame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/newgame"
+                    android:onClick="new_game"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/Table_1"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+            <View
+                android:id="@+id/EmptyView"
+                style="@style/EmptyView"
+                android:layout_below="@id/newGame"
+                android:layout_marginTop="10dp"></View>
+
+            <View
+                style="@style/EmptyView"
+                android:layout_below="@id/EmptyView"
+                android:layout_marginBottom="10dp"></View>
         </RelativeLayout>
     </ScrollView>
-
-    <View
-        android:id="@+id/EmptyView"
-        style="@style/EmptyView"
-        android:layout_below="@id/ScrollView_1"
-        android:layout_marginTop="15dp"></View>
-
-    <View
-        style="@style/EmptyView"
-        android:layout_below="@id/EmptyView"></View>
-
-
 </RelativeLayout>
