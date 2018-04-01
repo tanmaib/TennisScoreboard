@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">TennisScoreboard</string>
+    <string name="Title"> Tennis Scoreboard </string>
+    <string name="CurrentSet">Current Set </string>
+    <string name="previous">Previous Set</string>
+    <string name="Set">Set</string>
+    <string name="Game">Game</string>
+    <string name="points1">Points (+)</string>
+    <string name="points2">Points (-)</string>
+    <string name="Ace">Ace</string>
+    <string name="Fault">Fault</string>
+    <string name="Unfor">Unforced</string>
+    <string name="v">V</string>
+    <string name="Player1">Player1</string>
+    <string name="Player2">Player2</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="empty">-</string>
+    <string name="crown">Rolex Logo</string>
+
 </resources>
