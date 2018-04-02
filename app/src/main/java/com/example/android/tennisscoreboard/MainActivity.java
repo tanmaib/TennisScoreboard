@@ -12,12 +12,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int ace_Player1, ace_Player2, fault_Player1, fault_Player2, unforced_Player1, unforced_PLayer2;
-    TextView point_Player1_view, point_Player2_view, game_Player1_view, game_Player2_view;
-    int point_Player1, point_Player2, game_Player1, game_Player2, set_Player1, set_Player2, setNo, sets = 4, player1, player2;
-    TextView[] set_Player1_view = new TextView[sets];
-    TextView[] set_Player2_view = new TextView[sets];
-    Boolean whoWon;
+    protected int ace_Player1, ace_Player2, fault_Player1, fault_Player2, unforced_Player1, unforced_PLayer2;
+    private TextView point_Player1_view, point_Player2_view, game_Player1_view, game_Player2_view;
+    protected int point_Player1, point_Player2, game_Player1, game_Player2, set_Player1, set_Player2, setNo, sets = 4, player1, player2;
+    private TextView[] set_Player1_view = new TextView[sets];
+    private TextView[] set_Player2_view = new TextView[sets];
+    protected Boolean whoWon;
+    private Button btn, btn1, btn2, btn3, btn4, btn5, btn6, btn7;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
         set_Player2_view[1] = (TextView) findViewById(R.id.set2_Player2);
         set_Player2_view[2] = (TextView) findViewById(R.id.set3_Player2);
         set_Player2_view[3] = (TextView) findViewById(R.id.set4_Player2);
+        btn = (Button) findViewById(R.id.button_Point1);
+        btn1 = (Button) findViewById(R.id.button_Point2);
+        btn2= (Button) findViewById(R.id.Ace_Player1);
+        btn3 = (Button) findViewById(R.id.Ace_Player2);
+        btn4 = (Button) findViewById(R.id.Fault_Player1);
+        btn5 = (Button) findViewById(R.id.Fault_Player2);
+        btn6 = (Button) findViewById(R.id.Unforced_Player1);
+        btn7 = (Button) findViewById(R.id.Unforced_Player2);
 
         disable_Buttons();
 
@@ -89,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
                 if (point_Player1 < 40 && point_Player2 > 40) {
 
                     manipulatePLayerGame(game_Player2_view);
-                    if(setNo == 5){break;}
                     point_Player2 = 0;
                     point_Player1 = 0;
                     display(point_Player2_view, point_Player2);
@@ -108,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
                 } else if (point_Player2 > 50 && point_Player1 == 40) {
 
                     manipulatePLayerGame(game_Player2_view);
-                    if(setNo == 5){break;}
                     point_Player2 = 0;
                     point_Player1 = 0;
                     display(point_Player2_view, point_Player2);
@@ -127,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
                 if (point_Player1 > 40 && point_Player2 < 40) {
 
                     manipulatePLayerGame(game_Player1_view);
-                    if(setNo == 5){break;}
                     point_Player2 = 0;
                     point_Player1 = 0;
                     display(point_Player2_view, point_Player2);
@@ -146,7 +153,6 @@ public class MainActivity extends AppCompatActivity {
                 } else if (point_Player1 > 50 && point_Player2 == 40) {
 
                     manipulatePLayerGame(game_Player1_view);
-                    if(setNo == 5){break;}
                     point_Player2 = 0;
                     point_Player1 = 0;
                     display(point_Player2_view, point_Player2);
@@ -178,7 +184,11 @@ public class MainActivity extends AppCompatActivity {
                     set_Player1 = game_Player1;
                     set_Player2 = game_Player2;
                     displaySet(set_Player1, set_Player2);
-                    if(setNo == 5){break;}
+                    if(setNo == 5){
+
+                        display(view, game_Player1);
+                        display(game_Player2_view, game_Player2);
+                        return;}
                     game_Player1 = 0;
                     game_Player2 = 0;
                     display(view, game_Player1);
@@ -193,7 +203,11 @@ public class MainActivity extends AppCompatActivity {
                     set_Player1 = game_Player1;
                     set_Player2 = game_Player2;
                     displaySet(set_Player1, set_Player2);
-                    if(setNo == 5){break;}
+                    if(setNo == 5){
+
+                        display(view, game_Player1);
+                        display(game_Player2_view, game_Player2);
+                        return;}
                     game_Player1 = 0;
                     game_Player2 = 0;
                     display(view, game_Player1);
@@ -212,7 +226,11 @@ public class MainActivity extends AppCompatActivity {
                     set_Player1 = game_Player1;
                     set_Player2 = game_Player2;
                     displaySet(set_Player1, set_Player2);
-                    if(setNo == 5){break;}
+                    if(setNo == 5){
+
+                        display(view, game_Player2);
+                        display(game_Player1_view, game_Player1);
+                        return;}
                     game_Player1 = 0;
                     game_Player2 = 0;
                     display(view, game_Player2);
@@ -227,7 +245,11 @@ public class MainActivity extends AppCompatActivity {
                     set_Player1 = game_Player1;
                     set_Player2 = game_Player2;
                     displaySet(set_Player1, set_Player2);
-                    if(setNo == 5){break;}
+                    if(setNo == 5){
+
+                        display(view, game_Player2);
+                        display(game_Player1_view, game_Player1);
+                        return;}
                     game_Player1 = 0;
                     game_Player2 = 0;
                     display(view, game_Player2);
@@ -235,6 +257,30 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
         }
+    }
+
+    private void displaySet(int setP1, int setP2) {
+
+        if(setP1 > setP2){
+            player1 += 1;
+        }else if(setP1 < setP2){
+            player2 += 1;
+        }
+
+        if(setNo == 4){
+            if(player1 > player2){
+                whoWon = true;
+            }else if(player2 > player1){
+                whoWon = false;
+            }
+            end_Game();
+            setNo += 1;
+            return;
+        }
+
+        set_Player1_view[setNo].setText("" + setP1);
+        set_Player2_view[setNo].setText("" + setP2);
+        setNo += 1;
     }
 
     public void ace(View view) {
@@ -284,29 +330,6 @@ public class MainActivity extends AppCompatActivity {
         view.setText("" + number);
     }
 
-    private void displaySet(int setP1, int setP2) {
-
-        if(setP1 > setP2){
-            player1 += 1;
-        }else if(setP1 < setP2){
-            player2 += 1;
-        }
-
-        if(setNo == 4){
-            if(player1 > player2){
-                whoWon = true;
-            }else if(player2 > player1){
-                whoWon = false;
-            }
-            end_Game();
-            return;
-        }
-
-        set_Player1_view[setNo].setText("" + setP1);
-        set_Player2_view[setNo].setText("" + setP2);
-        setNo += 1;
-    }
-
     private void display_Text(TextView view, String text) {
 
         view.setText(text);
@@ -329,41 +352,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void enable_Buttons(){
 
-        Button btn = (Button) findViewById(R.id.button_Point1);
         btn.setEnabled(true);
-        Button btn1 = (Button) findViewById(R.id.button_Point2);
         btn1.setEnabled(true);
-        Button btn2= (Button) findViewById(R.id.Ace_Player1);
         btn2.setEnabled(true);
-        Button btn3 = (Button) findViewById(R.id.Ace_Player2);
         btn3.setEnabled(true);
-        Button btn4 = (Button) findViewById(R.id.Fault_Player1);
         btn4.setEnabled(true);
-        Button btn5 = (Button) findViewById(R.id.Fault_Player2);
         btn5.setEnabled(true);
-        Button btn6 = (Button) findViewById(R.id.Unforced_Player1);
         btn6.setEnabled(true);
-        Button btn7 = (Button) findViewById(R.id.Unforced_Player2);
         btn7.setEnabled(true);
     }
 
     private void disable_Buttons(){
 
-        Button btn = (Button) findViewById(R.id.button_Point1);
         btn.setEnabled(false);
-        Button btn1 = (Button) findViewById(R.id.button_Point2);
         btn1.setEnabled(false);
-        Button btn2= (Button) findViewById(R.id.Ace_Player1);
         btn2.setEnabled(false);
-        Button btn3 = (Button) findViewById(R.id.Ace_Player2);
         btn3.setEnabled(false);
-        Button btn4 = (Button) findViewById(R.id.Fault_Player1);
         btn4.setEnabled(false);
-        Button btn5 = (Button) findViewById(R.id.Fault_Player2);
         btn5.setEnabled(false);
-        Button btn6 = (Button) findViewById(R.id.Unforced_Player1);
         btn6.setEnabled(false);
-        Button btn7 = (Button) findViewById(R.id.Unforced_Player2);
         btn7.setEnabled(false);
     }
 
