@@ -11,6 +11,7 @@
     <string name="Fault">Fault</string>
     <string name="Unfor">Unforced</string>
     <string name="v">V</string>
+    <string name="Player">Player</string>
     <string name="Player1">Player1</string>
     <string name="Player2">Player2</string>
     <string name="Player11">Enter_Player1</string>
@@ -24,8 +25,15 @@
     <string name="crown">Rolex Logo</string>
     <string name="reset">Reset</string>
     <string name="newgame">New Game</string>
+    <string name="playerstats">PLAYER STATISTIC</string>
+    <string name="back">Back</string>
     <string name="new_game"><font size="30"><b> "Enter Player Name (optional) and click New Game." </b></font></string>
     <string name="p1_won"><font size="30"><b> "Player 1 Won." </b></font></string>
     <string name="p2_won"><font size="30"><b> "Player 2 Won." </b></font></string>
+    <string name="setswon">Sets Won</string>
+    <string name="gameswon">Games Won</string>
+    <string name="entername">Enter Players Names :</string>
+    <string name="text">and / or press Ok.</string>
+    <string name="ok">OK</string>
 
 </resources>

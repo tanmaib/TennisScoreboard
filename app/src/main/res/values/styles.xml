@@ -11,6 +11,16 @@
         <item name="colorButtonNormal">@color/button</item>
     </style>
 
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryDark">@color/background</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="colorButtonNormal">@color/button</item>
+    </style>
+
     <style name="ImageView">
         <item name="android:layout_width">@dimen/wrap_content</item>
         <item name="android:layout_height">@dimen/wrap_content</item>
@@ -26,8 +36,6 @@
     </style>
 
     <style name="EditText">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">@dimen/wrap_content</item>
         <item name="android:layout_margin">7dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
@@ -45,6 +53,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextView_2">
@@ -82,7 +91,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:background">@color/view</item>
+        <item name="android:background">@color/view1</item>
     </style>
 
     <style name="Button_1">
@@ -91,7 +100,7 @@
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
     <style name="TextView_5">
@@ -100,7 +109,7 @@
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">17sp</item>
     </style>
 
     <style name="EmptyView_2">
@@ -121,7 +130,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:background">@color/view</item>
+        <item name="android:background">@color/view1</item>
     </style>
 
     <style name="TextView_7">
@@ -129,6 +138,19 @@
         <item name="android:layout_height">@dimen/wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView8">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_margin">7dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/button</item>
     </style>
 
     <style name="Button_2">
@@ -136,8 +158,35 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:background">@drawable/rounded_corners1</item>
+    </style>
+
+    <style name="Button_3">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+
+    <style name="DontCopyMyStyle" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/holo_green_dark</item>
+        <item name="android:textColor">#9E9D24</item>
+    </style>
+
+    <style name="TextView_9">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 
 </resources>
-

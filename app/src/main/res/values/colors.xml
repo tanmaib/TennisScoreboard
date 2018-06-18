@@ -6,7 +6,8 @@
     <color name="background">#1B5E20</color>
     <color name="text">#FFD600</color>
     <color name="view">#4527A0</color>
-    <color name="view1">#5E35B1</color>
+    <color name="view1">#311B92</color>
+    <color name="view2">#5E35B1</color>
     <color name="button">#9E9D24</color>
     <color name="black">#000000</color>
 </resources>

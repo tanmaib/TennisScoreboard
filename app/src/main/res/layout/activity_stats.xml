@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatsActivity">
+
+    <TextView
+        android:id="@+id/TextView1_stats"
+        android:layout_width="@dimen/match_parent"
+        android:layout_height="@dimen/wrap_content"
+        android:background="@color/button"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/playerstats"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/Layout1_stats"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wrap_content"
+        android:layout_below="@id/TextView1_stats"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/TextView1_p1"
+            style="@style/TextView_9"
+            android:text="@string/Player1" />
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/Player"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TextView1_p2"
+            style="@style/TextView_9"
+            android:text="@string/Player2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout2_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout1_stats"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/Ace"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TextView2_p2"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout3_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout2_stats"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/TextView3_p1"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/setswon"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TextView3_p2"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout4_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout3_stats"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/TextView4_p1"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/Unfor"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TextView4_p2"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout5_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout4_stats"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/TextView5_p1"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/Fault"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TextView5_p2"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout6_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout5_stats"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/TextView6_p1"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+
+        <TextView
+            style="@style/TextView_9"
+            android:text="@string/gameswon"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TextView6_p2"
+            style="@style/TextView_9"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+</RelativeLayout>
