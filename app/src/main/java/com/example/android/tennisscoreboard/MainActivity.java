@@ -135,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
 
                     point_Player2 = 40;
                     point_Player1 = 40;
-                    display(point_Player2_view, point_Player2);
-                    display(point_Player1_view, point_Player1);
+                    display_Text(point_Player2_view, "Deuce");
+                    display_Text(point_Player1_view, "Deuce");
                     break;
                 }
 
@@ -171,8 +171,8 @@ public class MainActivity extends AppCompatActivity {
 
                     point_Player2 = 40;
                     point_Player1 = 40;
-                    display(point_Player2_view, point_Player2);
-                    display(point_Player1_view, point_Player1);
+                    display_Text(point_Player2_view, "Deuce");
+                    display_Text(point_Player1_view, "Deuce");
                     break;
                 }
         }

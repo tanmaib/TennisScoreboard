@@ -52,6 +52,7 @@
 
         <TextView
             style="@style/TextView_9"
+            android:id="@+id/TextView2_p1"
             android:text="@string/zero" />
 
         <TextView
