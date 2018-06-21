@@ -8,20 +8,38 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
+
+        <!-- Splash screen -->
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme"
-            android:launchMode="singleTop">
+            android:name=".Main2Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StatsActivity"
-            android:theme="@style/AppTheme1"
+
+        <!-- Main activity -->
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme">
+        <!-- <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+             <category android:name="android.intent.category.LAUNCHER" />
+         </intent-filter> -->
+     </activity>
+
+     <!-- Stats activity -->
+        <activity
+            android:name=".StatsActivity"
             android:label="@string/back"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme1" />
     </application>
 
 </manifest>
